@@ -1,2 +1,11 @@
-# sasergeevna_portfolio.github.io
-Junior Data Analyst portfolio
+# Портфолио проектов 
+###  Список:
+| Название | Инструменты |
+
+
+```sql
+SELECT * 
+FROM books
+WHERE COD = 2;
+```
+
