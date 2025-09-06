@@ -69,10 +69,10 @@ WITH get_genre_buy_amount(name_genre, amount) AS
     JOIN buy_book using(book_id)
     JOIN genre using(genre_id)
   GROUP BY name_genre
-  HAVING sum(buy_book.amount) >= 1)
+  HAVING SUM(buy_book.amount) >= 1)
 SELECT name_genre, amount as Количество
 FROM get_genre_buy_amount 
-WHERE amount = (select min(amount) 
+WHERE amount = (SELECT MIN(amount) 
   FROM get_genre_buy_amount);
 ```
 
